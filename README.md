@@ -1,3 +1,6 @@
+## ClashGO
+在Clash For Android项目的基础上加入了默认的订阅地址，首次启动时自动更新订阅
+
 ## Clash for Android
 
 A Graphical user interface of [clash](https://github.com/Dreamacro/clash) for Android
