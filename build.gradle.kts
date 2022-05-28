@@ -34,14 +34,14 @@ subprojects {
     extensions.configure<BaseExtension> {
         defaultConfig {
             if (isApp) {
-                applicationId = "com.github.kr328.clash"
+                applicationId = "com.github.clashgo.android"
             }
 
             minSdk = 21
             targetSdk = 31
 
-            versionName = "2.5.9"
-            versionCode = 205009
+            versionName = "1.0.1"
+            versionCode = 10001
 
             resValue("string", "release_name", "v$versionName")
             resValue("integer", "release_code", "$versionCode")
@@ -55,7 +55,7 @@ subprojects {
             if (!isApp) {
                 consumerProguardFiles("consumer-rules.pro")
             } else {
-                setProperty("archivesBaseName", "cfa-$versionName")
+                setProperty("archivesBaseName", "cgo-$versionName")
             }
         }
 
