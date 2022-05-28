@@ -1,10 +1,12 @@
 package com.github.kr328.clash
 
 import androidx.activity.result.contract.ActivityResultContracts
+import com.github.kr328.clash.common.log.Log
 import com.github.kr328.clash.common.util.intent
 import com.github.kr328.clash.common.util.ticker
 import com.github.kr328.clash.design.MainDesign
 import com.github.kr328.clash.design.ui.ToastDuration
+import com.github.kr328.clash.service.model.Profile
 import com.github.kr328.clash.store.TipsStore
 import com.github.kr328.clash.util.startClashService
 import com.github.kr328.clash.util.stopClashService
@@ -27,7 +29,9 @@ class MainActivity : BaseActivity<MainDesign>() {
             showUpdatedTips(design)
         }
 
-        design.fetch()
+        design.checkEmpty()
+
+        //design.fetch()
 
         val ticker = ticker(TimeUnit.SECONDS.toMillis(1))
 
@@ -104,6 +108,27 @@ class MainActivity : BaseActivity<MainDesign>() {
 
         withProfile {
             setProfileName(queryActive()?.name)
+        }
+    }
+
+    private suspend fun MainDesign.checkEmpty() {
+        withProfile {
+            if(queryAll().isEmpty()){
+                var uuid = create(Profile.Type.Url , "VIP" , "https://c1n.cn/clash")
+                commit(uuid)
+                var profile = queryByUUID(uuid)
+                if (profile != null) {
+                    setActive(profile)
+                    setProfileName(profile.name)
+                }
+            } else {
+                var profile = queryActive()
+                if (profile != null)
+                {
+                    update(profile.uuid)
+                }
+                fetch()
+            }
         }
     }
 
