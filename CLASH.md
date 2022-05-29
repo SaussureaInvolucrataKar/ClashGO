@@ -2,7 +2,8 @@
 
 ### oslook
 
-https://github.com/oslook/clash-freenode
+[oslook](https://github.com/oslook/clash-freenode)  
+https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml
 
 ### alanbobs999
 
