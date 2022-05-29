@@ -196,7 +196,8 @@
     <string name="import_from_clipboard">Import from Clipboard</string>
     <string name="export_to_clipboard">Export to Clipboard</string>
 
-    <string name="clash_for_android">ClashGo for Android</string>
+    <string name="clash_for_android">Clash for Android</string>
+    <string name="clash_go" translatable="false">ClashGo</string>
 
     <string name="document">Document</string>
     <string name="feedback">Feedback</string>
@@ -208,12 +209,14 @@
     <string name="clash_core">Clash Core</string>
     <string name="clash_wiki_url" translatable="false">https://github.com/Dreamacro/clash/wiki</string>
     <string name="github_issues_url" translatable="false">https://github.com/Kr328/ClashForAndroid/issues</string>
+    <string name="clashgo_issues_url" translatable="false">https://github.com/SaussureaInvolucrataKar/ClashGO/issues</string>
     <string name="donate_url" translatable="false">https://donate.kr328.app</string>
     <string name="github_url" translatable="false">https://github.com/Kr328/ClashForAndroid</string>
     <string name="clash_core_url" translatable="false">https://github.com/Dreamacro/clash</string>
+    <string name="clash_go_url" translatable="false">https://github.com/SaussureaInvolucrataKar/ClashGO</string>
 
     <string name="tips_properties"><![CDATA[Accept Only <strong>Clash Config</strong>(including <strong>Proxy</strong>/<strong>Rules</strong>)]]></string>
-    <string name="tips_help"><![CDATA[ClashGo for Android is a <strong>freeware</strong> and we do <strong>NOT</strong> provide any service for it]]></string>
+    <string name="tips_help"><![CDATA[Clash for Android & ClashGo is a <strong>freeware</strong> and we do <strong>NOT</strong> provide any service for it]]></string>
 
     <string name="google_play_url" translatable="false">https://play.google.com/store/apps/details?id=com.github.kr328.clash</string>
 

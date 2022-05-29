@@ -67,6 +67,15 @@ class HelpDesign(
                 }
             }
 
+            clickable(
+                title = R.string.github_issues,
+                summary = R.string.clashgo_issues_url
+            ) {
+                clicked {
+                    openLink(Uri.parse(context.getString(R.string.clashgo_issues_url)))
+                }
+            }
+
             if (!BuildConfig.PREMIUM) {
                 category(R.string.sources)
 
@@ -76,6 +85,15 @@ class HelpDesign(
                 ) {
                     clicked {
                         openLink(Uri.parse(context.getString(R.string.github_url)))
+                    }
+                }
+
+                clickable(
+                    title = R.string.clash_go,
+                    summary = R.string.clash_go_url
+                ) {
+                    clicked {
+                        openLink(Uri.parse(context.getString(R.string.clash_go_url)))
                     }
                 }
 
